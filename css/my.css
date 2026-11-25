@@ -1,3 +1,309 @@
+/* =========================================
+   1. БАЗОВЫЕ СТИЛИ И ШРИФТЫ
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef9eb;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   2. ШАПКА САЙТА
+   ========================================= */
+.header {
+    background-color: #eef9eb; 
+    padding: 20px 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #2e7d32;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav__link:hover, .nav__link--active {
+    color: #4caf50; 
+}
+
+/* =========================================
+   3. ПЕРВЫЙ ЭКРАН (HERO)
+   ========================================= */
+.hero {
+    padding: 20px 0 60px 0;
+    background-color: #eef9eb; 
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero__content {
+    flex: 1;
+}
+
+/* Заголовок */
+.hero__title {
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.text-bright {
+    color: #4caf50; /* Ярко-зеленый */
+}
+
+.text-dark {
+    color: #004d40; /* Темно-зеленый */
+}
+
+.hero__subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000; /* Черный текст */
+}
+
+/* Кнопки-плашки */
+.hero__buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn--black {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+}
+
+.btn--black:hover {
+    background-color: #333;
+}
+
+.btn--light {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.btn--light:hover {
+    background: #fff;
+    color: #003b2e;
+}
+
+/* Картинка */
+.hero__image {
+    flex: 1;
+    position: relative;
+}
+
+.hero__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Кнопка на картинке */
+.btn-image {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-image:hover {
+    background-color: #333;
+}
+
+/* =========================================
+   4. СЕКЦИЯ "ОБО МНЕ" (Раздел 1) - Темный фон
+   ========================================= */
+.about-me {
+    background-color: #003b2e;
+    padding: 60px 0;
+    color: #fff;
+}
+
+.about-me__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: left; 
+}
+
+.about-me__content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-me__photo {
+    flex: 1;
+}
+
+.placeholder-square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #4caf50; 
+    border-radius: 10px;
+}
+
+.about-me__text {
+    flex: 2;
+    font-size: 18px;
+}
+
+.about-me__stats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.stat-item .stat-number {
+    font-size: 32px;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Текст под цифрами */
+.stat-text {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* =========================================
+   5. РАЗДЕЛ 2 - Светлый фон
+   ========================================= */
+.section-block {
+    padding: 60px 0;
+    background-color: #eef9eb; /* Светло-зеленый фон */
+}
+
+/* =========================================
+   6. СЕКЦИЯ С ТРЕМЯ КАРТОЧКАМИ
+   ========================================= */
+.cards {
+    padding: 60px 0;
+    background-color: #eef9eb; 
+}
+
+.cards__container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    background-color: #4caf50; 
+    border-radius: 15px;
+}
+
+/* =========================================
+   7. АДАПТИВНОСТЬ
+   ========================================= */
+@media (max-width: 992px) {
+    .hero__container, .about-me__content {
+        flex-direction: column;
+    }
+    .hero__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero__title {
+        font-size: 32px;
+    }
+    .cards__container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        aspect-ratio: auto;
+        height: 200px;
+    }
+}
+
+/* =========================================
+   8. ТВОИ СТАРЫЕ КЛАССЫ
+   ========================================= */
 .card-subtitle {
   margin-top: 1.5rem;
 }
@@ -6,11 +312,9 @@
   align-self: center;
   height: 300px;
   width: fit-content;
+  object-fit: contain; 
 }
 
-/* Прижимаем блок с оценкой к низу карточки */
 .card-bottom {
-    margin-top: auto; /* Это свойство съедает всё свободное место сверху, прижимая блок вниз */
+    margin-top: auto; 
 }
-
-/* (Опционально) Чтобы картинки были одинаковой высоты, если они разного размера */
