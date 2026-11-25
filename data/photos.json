@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "title": "Фото 1",
+    "vendor_code": "111",
+    "description": "Описание 1",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "2",
+    "title": "Фото 2",
+    "vendor_code": "222",
+    "description": "Описание 2",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "3",
+    "title": "Фото 3",
+    "vendor_code": "333",
+    "description": "Описание 3",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "4",
+    "title": "Фото 4",
+    "vendor_code": "444",
+    "description": "Описание 4",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "5",
+    "title": "Фото 5",
+    "vendor_code": "555",
+    "description": "Описание 5",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "6",
+    "title": "Фото 6",
+    "vendor_code": "4446e",
+    "description": "Описание 6",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "7",
+    "title": "Фото 7",
+    "vendor_code": "777",
+    "description": "Описание 7",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "8",
+    "title": "Фото 8",
+    "vendor_code": "888",
+    "description": "Описание 8",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "9",
+    "title": "Фото 9",
+    "vendor_code": "999",
+    "description": "Описание 9",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "10",
+    "title": "Фото 10",
+    "vendor_code": "10000",
+    "description": "Описание 10",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "11",
+    "title": "Фото 11",
+    "vendor_code": "1100",
+    "description": "Описание 11",
+    "img": "./images/test.png"
+  },
+  {
+    "id": "12",
+    "title": "Фото 12",
+    "vendor_code": "1200",
+    "description": "Описание 12",
+    "img": "./images/test.png"
+  }
+]
