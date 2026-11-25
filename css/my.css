@@ -78,7 +78,6 @@ body {
     flex: 1;
 }
 
-/* Заголовок */
 .hero__title {
     font-size: 52px;
     line-height: 1.1;
@@ -88,21 +87,20 @@ body {
 }
 
 .text-bright {
-    color: #4caf50; /* Ярко-зеленый */
+    color: #4caf50;
 }
 
 .text-dark {
-    color: #004d40; /* Темно-зеленый */
+    color: #004d40;
 }
 
 .hero__subtitle {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #000; /* Черный текст */
+    color: #000;
 }
 
-/* Кнопки-плашки */
 .hero__buttons {
     display: flex;
     gap: 20px;
@@ -140,7 +138,6 @@ body {
     color: #003b2e;
 }
 
-/* Картинка */
 .hero__image {
     flex: 1;
     position: relative;
@@ -153,7 +150,6 @@ body {
     display: block;
 }
 
-/* Кнопка на картинке */
 .btn-image {
     position: absolute;
     bottom: 20px;
@@ -173,7 +169,7 @@ body {
 }
 
 /* =========================================
-   4. СЕКЦИЯ "ОБО МНЕ" (Раздел 1) - Темный фон
+   4. СЕКЦИЯ "ОБО МНЕ" (Раздел 1)
    ========================================= */
 .about-me {
     background-color: #003b2e;
@@ -231,18 +227,17 @@ body {
     color: #fff;
 }
 
-/* Текст под цифрами */
 .stat-text {
     font-size: 14px;
     color: #ccc;
 }
 
 /* =========================================
-   5. РАЗДЕЛ 2 - Светлый фон
+   5. РАЗДЕЛ 2
    ========================================= */
 .section-block {
     padding: 60px 0;
-    background-color: #eef9eb; /* Светло-зеленый фон */
+    background-color: #eef9eb;
 }
 
 /* =========================================
@@ -267,7 +262,157 @@ body {
 }
 
 /* =========================================
-   7. АДАПТИВНОСТЬ
+   7. ПОДВАЛ (FOOTER)
+   ========================================= */
+.footer {
+    background-color: #003b2e;
+    color: #b2d8c3;
+    padding: 60px 0 30px 0;
+    font-size: 15px;
+}
+
+.footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer__col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer__col--brand {
+    flex: 1.5;
+    min-width: 250px;
+}
+
+.footer__logo {
+    color: #fff;
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer__logo span {
+    color: #4caf50;
+}
+
+.footer__desc {
+    max-width: 300px;
+}
+
+.footer__title {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__list li {
+    margin-bottom: 12px;
+}
+
+.footer__list a {
+    color: #b2d8c3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__list a:hover {
+    color: #fff;
+}
+
+.footer__divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.footer__requisites {
+    line-height: 1.8;
+}
+
+.footer__requisites p {
+    margin: 0;
+}
+
+.footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer__links a {
+    color: #b2d8c3;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.footer__links a:hover {
+    color: #fff;
+}
+
+.footer__icon-mail {
+    font-size: 18px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon-max, .icon-vk {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.icon-max {
+    background: #5b7cfa;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.icon-vk {
+    background: #0077FF;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    font-size: 10px;
+}
+
+/* =========================================
+   8. АДАПТИВНОСТЬ
    ========================================= */
 @media (max-width: 992px) {
     .hero__container, .about-me__content {
@@ -299,10 +444,24 @@ body {
         aspect-ratio: auto;
         height: 200px;
     }
+    
+    /* Адаптивность для подвала */
+    .footer__top {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .footer__links {
+        gap: 15px;
+    }
 }
 
 /* =========================================
-   8. ТВОИ СТАРЫЕ КЛАССЫ
+   9. ТВОИ СТАРЫЕ КЛАССЫ
    ========================================= */
 .card-subtitle {
   margin-top: 1.5rem;
@@ -317,4 +476,187 @@ body {
 
 .card-bottom {
     margin-top: auto; 
+}
+
+/* =========================================
+   10. СТИЛИ ДЛЯ КАТАЛОГА (КАРТОЧКА ТОВАРА)
+   ========================================= */
+.catalog-wrapper {
+    background-color: #eef9eb;
+    border-radius: 30px;
+    padding: 50px 20px;
+    max-width: 1200px; /* Сделал шире, чтобы влезало несколько карточек в ряд */
+    margin: 0 auto;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.catalog-title {
+    color: #004d40;
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.catalog-subtitle {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Сетка для карточек */
+.catalog-grid {
+    display: flex;
+    flex-wrap: wrap;       /* Позволяет карточкам переноситься на новую строку */
+    justify-content: center;
+    gap: 30px;             /* Расстояние между карточками */
+}
+
+/* Сама карточка товара */
+.product-card {
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;      /* Чуть уменьшил ширину, чтобы влезало 3 в ряд на ПК */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Легкая тень по умолчанию */
+    transition: all 0.3s ease; /* Плавная анимация для всех эффектов */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ЭФФЕКТ ПРИ НАВЕДЕНИИ */
+.product-card:hover {
+    transform: translateY(-8px) scale(1.02); /* Поднимает вверх и чуть увеличивает */
+    box-shadow: 0 15px 30px rgba(0, 77, 64, 0.15); /* Появляется глубокая тень */
+}
+
+.product-image-wrapper {
+    padding: 15px;
+    padding-bottom: 0;
+}
+
+.product-image {
+    width: 100%;
+    height: 250px; /* Чуть уменьшил высоту для аккуратности */
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: #4caf50; 
+}
+
+.product-info {
+    padding: 20px 25px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Чтобы все карточки были одинаковой высоты */
+}
+
+.product-type {
+    color: #a0a0a0;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.product-title {
+    color: #004d40;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.product-desc {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex: 1; /* Прижимает блок с корзиной к низу карточки */
+}
+
+/* Блок с корзиной и счетчиком */
+.product-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.product-cart-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-action-text {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+}
+
+/* Кастомный счетчик (стрелочки) */
+.product-counter {
+    display: flex;
+    align-items: center;
+    background-color: #003b2e; 
+    border-radius: 8px;
+    padding: 5px;
+    width: 80px; /* Немного уменьшил */
+    justify-content: space-between;
+}
+
+.product-count-input {
+    width: 35px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.product-count-input::-webkit-outer-spin-button,
+.product-count-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.product-count-arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем стрелочки */
+    justify-content: center;
+    gap: 2px;
+}
+
+.arrow-up, .arrow-down {
+    color: #4caf50; 
+    font-size: 10px;
+    cursor: pointer;
+    line-height: 1;
+    user-select: none; /* Чтобы не выделялся текст при клике */
+}
+
+/* Кнопка "Добавить в корзину" внизу страницы */
+.btn-submit-catalog {
+    background-color: #003b2e;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit-catalog:hover {
+    background-color: #004d40;
 }

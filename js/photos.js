@@ -1,24 +1,55 @@
-// Загружаем данные о товарах из файла photos.json.
 fetch("./data/photos.json")
-  // Преобразуем полученный ответ сервера из JSON в JavaScript-массив.
   .then(response => response.json())
-  // После загрузки данных создаём HTML-карточки товаров.
   .then(data => {
-    // Находим список на странице photos.html, в который нужно добавить товары.
+    // Выводим все карточки
     document.querySelector("#node_for_insert").innerHTML = data
-      .map(product => `
-        <li style="width: 210px" class="d-flex flex-column m-1 p-1 border bg-body">
-          <img style="width: 180px" class="align-self-center mb-2" src="${product.img}" alt="${product.title}">
-          <div class="card-bottom"> 
-          <h6 class="card-subtitle">${product.title}</h6>
-          <p class="card-text text-muted" style="font-size: 1em;">${product.description}</p>
-            <input type="hidden" name="vendor_code" value="${product.vendor_code}">
-            <p class="card-text mb-0">Ваша оценка
-              <input class="w-25" type="number" name="оценка" value="0" min="0" max="10">
-            </p>
+      .map((product, index) => `
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="${product.img}" alt="${product.title}" class="product-image">
           </div>
-        </li>
+          
+          <div class="product-info">
+            <p class="product-type">Название типа продукта</p>
+            <h3 class="product-title">${product.title}</h3>
+            <p class="product-desc">${product.description}</p>
+            
+            <input type="hidden" name="vendor_code_${index}" value="${product.vendor_code}">
+            
+            <div class="product-action">
+              <div class="product-cart-icon">
+                <img src="images/test.png" alt="Корзина" style="width: 40px; height: 40px; object-fit: contain;">
+                <span class="product-action-text">Добавить<br>в корзину:</span>
+              </div>
+              
+              <div class="product-counter">
+                <!-- ИЗМЕНЕНО: value="0" и min="0" -->
+                <input class="product-count-input" type="number" name="quantity_${index}" value="0" min="0" max="99" readonly>
+                
+                <!-- Кнопки управления -->
+                <div class="product-count-arrows">
+                  <button type="button" class="arrow-btn arrow-up" onclick="changeQuantity(this, 1)">▲</button>
+                  <button type="button" class="arrow-btn arrow-down" onclick="changeQuantity(this, -1)">▼</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       `)
       .join("");
   })
   .catch(error => console.error("Не удалось загрузить каталог товаров:", error));
+
+// Функция для изменения количества
+function changeQuantity(button, delta) {
+    // Находим ближайший инпут с числом
+    const input = button.closest('.product-counter').querySelector('.product-count-input');
+    let currentValue = parseInt(input.value);
+    let newValue = currentValue + delta;
+    
+    // ИЗМЕНЕНО: теперь проверяем от 0 до 99
+    if (newValue >= 0 && newValue <= 99) {
+        input.value = newValue;
+    }
+}
